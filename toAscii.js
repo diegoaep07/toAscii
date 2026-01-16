@@ -10,3 +10,8 @@ export let textToAscii = (text) => {
 
   return values
 }
+
+export let asciiToText = (asciiArray) => {
+  const textBuffer = transcode(Buffer.from(asciiArray), 'ascii', 'utf8')
+  return textBuffer.toString()
+}
