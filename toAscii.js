@@ -1,6 +1,6 @@
 import { Buffer, transcode } from 'node:buffer'
 
-export textToAscii = (text) => {
+export let textToAscii = (text) => {
   const asciiBuffer = transcode(Buffer.from(text), 'utf8', 'ascii')
   let values = []
 
